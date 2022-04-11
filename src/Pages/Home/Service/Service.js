@@ -4,12 +4,14 @@ import "./Service.css";
 const Service = ({ service }) => {
   const { name, img, description, price } = service;
   return (
-    <div className="service">
-      <img src={img} alt="" />
-      <h2>service : {name}</h2>
-      <p> Price: {price}</p>
-      <p>{description}</p>
-      <button> Book: {name}</button>
+    <div className="container">
+      <div className="service">
+        <img className="w-100" src={img} alt="" />
+        <h2>service : {name}</h2>
+        <p> Price: {price}</p>
+        <p>{description}</p>
+        <button className="btn btn-primary"> Book: {name}</button>
+      </div>
     </div>
   );
 };
