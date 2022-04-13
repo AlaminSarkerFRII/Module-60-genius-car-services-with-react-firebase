@@ -12,18 +12,34 @@ const Register = () => {
   // handle register form
   const handleRegister = (event) => {
     event.preventDefault();
+    // console.log(event.target); // full formta accesshobe
+    // console.log(event.target.email); // email k access kora
+    // console.log(event.target.email.value); // email er value ta k access kora
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
   };
   return (
     <div className="register-form">
       <h2 className="text-center py-3">Please Register</h2>
       <form onSubmit={handleRegister}>
-        <input type="text" placeholder="name" required />
-        <input type="email" placeholder="enter your email" required />
-        <input type="password" placeholder="password" required />
+        <input type="text" name="name" placeholder="name" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="enter your email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          required
+        />
         <input className="bg-info" type="submit" value="Register" />
       </form>
       <p>
-        New to Genius Car ?
+        Already have an account ?
         <Link
           to="/login"
           onClick={navigateToLogin}

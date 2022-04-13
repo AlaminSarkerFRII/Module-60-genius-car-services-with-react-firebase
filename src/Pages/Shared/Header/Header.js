@@ -2,17 +2,12 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../../imgs/logo.jpg";
+import "./Header.css";
 
 const Header = () => {
   return (
     <>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        sticky="top"
-        bg="primary"
-        variant="dark"
-      >
+      <Navbar collapseOnSelect expand="lg" sticky="top" bg="primary">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img height={50} src={logo} alt="" />
