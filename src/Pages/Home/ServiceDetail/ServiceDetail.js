@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ServiceDetail = () => {
   // parameter akare niye asbo
@@ -8,6 +8,11 @@ const ServiceDetail = () => {
   return (
     <div>
       <h2>Service Detail : {serviceId}</h2>
+      <div className="text-center">
+        <Link to="/checkout">
+          <button className="btn btn-primary">Proceed To Checkout</button>
+        </Link>
+      </div>
     </div>
   );
 };
